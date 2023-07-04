@@ -6,6 +6,7 @@ import { useState } from "react";
 
 const apiKey = process.env.REACT_APP_API_KEY;
 export function App() {
+  const [location, setLocation] = useState("London");
   const [weatherData, setWeatherData] = useState();
 
   const handleSearch = () => {
@@ -13,7 +14,8 @@ export function App() {
       .get("/current.json", {
         params: {
           key: apiKey,
-          q: "london",
+          q: location,
+          lang: "pt",
         },
       })
       .then((response) => {
@@ -25,7 +27,11 @@ export function App() {
 
   return (
     <>
-      <Header handleSearch={handleSearch} />
+      <Header
+        handleSearch={handleSearch}
+        value={location}
+        setLocation={setLocation}
+      />
       {weatherData && <Main weatherData={weatherData} />}
       <GlobalStyle />
     </>

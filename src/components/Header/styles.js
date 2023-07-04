@@ -9,7 +9,10 @@ export const Container = styled.div`
   align-items: center;
   padding: 30px;
   background: #475569;
-
+  h2 {
+    color: #fff;
+    font-weight: bold;
+  }
   .content input[type="text"] {
     width: 500px;
     height: 45px;
@@ -29,16 +32,16 @@ export const Container = styled.div`
       border: 1px solid grey;
     }
   }
-  .content button[type='button']{
+  .content button[type="button"] {
     width: 80px;
     height: 45px;
     margin-left: 5px;
-    border:none;
+    border: none;
     text-align: center;
-    color:#fff;
+    color: #fff;
     font-weight: bold;
     border-radius: 12px;
-    background:#1163ff;
+    background: #1163ff;
     /* background-color: rgb(255, 56, 86); */
   }
 `;

@@ -4,7 +4,7 @@ export const Container = styled.div`
   width: 300px;
   height: 600px;
   border-radius: 30px 0 0 30px;
-  padding: 15px;
+  padding: 25px;
   background: var(--white);
 
   h2 {
@@ -40,5 +40,27 @@ export const Container = styled.div`
   .icon {
     width: 40px;
     height: 20px;
+  }
+  .weather-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  .weather-container img {
+    width: 128px;
+    height: 128px;
+  }
+  .weather-container p {
+    font-family: "IBM Plex Sans Light", sans-serif;
+    font-size: 3.5rem;
+    font-weight: bold;
+  }
+  .time {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    font-size: 1.5rem;
+    border-bottom: 1px solid var(--gray-300);
   }
 `;

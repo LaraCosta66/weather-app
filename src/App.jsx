@@ -11,11 +11,13 @@ export function App() {
 
   const handleSearch = () => {
     api
-      .get("/current.json", {
+      .get("/forecast.json", {
         params: {
           key: apiKey,
           q: location,
+          days: 7,
           lang: "pt",
+          is_day: 0,
         },
       })
       .then((response) => {
@@ -31,7 +33,9 @@ export function App() {
         handleSearch={handleSearch}
         value={location}
         setLocation={setLocation}
+        weatherData={weatherData}
       />
+
       {weatherData && <Main weatherData={weatherData} />}
       <GlobalStyle />
     </>

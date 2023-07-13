@@ -1,8 +1,9 @@
 import { SideBar } from "./components/SideBar";
-// import { Main } from "./components/Main";
+import { Main } from "./components/Main/main";
 import { GlobalStyle } from "./styles/global";
 import api from "./services/api";
 import { useState } from "react";
+import { Container } from "./styles/App";
 
 const apiKey = process.env.REACT_APP_API_KEY;
 export function App() {
@@ -26,7 +27,7 @@ export function App() {
   };
 
   return (
-    <>
+    <Container>
       <SideBar
         handleSearch={handleSearch}
         value={location}
@@ -34,8 +35,8 @@ export function App() {
         weatherData={weatherData}
       />
 
-      {/* {weatherData && <Main weatherData={weatherData} />} */}
+      <Main weatherData={weatherData} />
       <GlobalStyle />
-    </>
+    </Container>
   );
 }

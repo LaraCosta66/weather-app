@@ -1,5 +1,5 @@
-import { Header } from "./components/Header";
-import { Main } from "./components/Main";
+import { SideBar } from "./components/SideBar";
+// import { Main } from "./components/Main";
 import { GlobalStyle } from "./styles/global";
 import api from "./services/api";
 import { useState } from "react";
@@ -16,8 +16,6 @@ export function App() {
           key: apiKey,
           q: location,
           days: 7,
-          lang: "pt",
-          is_day: 0,
         },
       })
       .then((response) => {
@@ -29,14 +27,14 @@ export function App() {
 
   return (
     <>
-      <Header
+      <SideBar
         handleSearch={handleSearch}
         value={location}
         setLocation={setLocation}
         weatherData={weatherData}
       />
 
-      {weatherData && <Main weatherData={weatherData} />}
+      {/* {weatherData && <Main weatherData={weatherData} />} */}
       <GlobalStyle />
     </>
   );

@@ -35,7 +35,7 @@ export function SideBar({ handleSearch, location, setLocation, weatherData }) {
       {weatherData && weatherData.forecast && (
         <>
         <div className="time">
-          <p>{formatDate(weatherData.forecast.forecastday[0].date)}, {formatTime(weatherData.location.localtime)}</p>
+          <p>{formatDate(weatherData.location.localtime)}, {formatTime(weatherData.location.localtime)}</p>
         </div>
         <div className="container-icons"> 
           <span><img src={weatherData.forecast.forecastday[0].hour[0].condition.icon} alt="weather-icon"  />{weatherData.forecast.forecastday[0].hour[0].condition.text}</span>

@@ -31,7 +31,7 @@ export const Container = styled.div`
     height: 30px;
     border: none;
     padding: 5px;
-    background-color: var(--gray-700);
+    background-color: var(--gray-400);
     color: white;
     cursor: pointer;
     border-radius: 20%;

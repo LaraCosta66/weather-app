@@ -1,3 +1,4 @@
+import Daily  from "../DailyHighlights";
 import { Container,Content } from "./styles";
 
 export function Main({ weatherData }) {
@@ -39,6 +40,7 @@ export function Main({ weatherData }) {
             );
           })}
       </Content>
+      <Daily weatherData={weatherData}/>
     </Container>
   );
 }

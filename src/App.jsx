@@ -1,5 +1,5 @@
 import { SideBar } from "./components/SideBar";
-import { Main } from "./components/Main/main";
+import { Main } from "./components/Main";
 import { GlobalStyle } from "./styles/global";
 import api from "./services/api";
 import { useState } from "react";

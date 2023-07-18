@@ -1,11 +1,20 @@
 import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
+:root{
+    --gray-700:#374151;
+    --gray-500:#737373;
+    --gray-400:#84a4ac;
+    --gray-300: #d1d5db;
+    --gray-200:#e5e7eb;
+    --white:#f3f4f6;
+}
 
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'IBM Plex Sans Light', sans-serif;
 }
 html{
     @media (max-width: 1080px ) {
@@ -15,6 +24,10 @@ html{
         font-size: 87.5%;
     }
 }
+body{
+    background: var(--gray-300);
+    padding: 50px 200px;
+}
 button{
     cursor: pointer;
 }
@@ -23,4 +36,4 @@ button{
     cursor: not-allowed;
 }
 
-`
+`;

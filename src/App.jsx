@@ -1,39 +1,42 @@
-import { Header } from "./components/Header";
+import { SideBar } from "./components/SideBar";
 import { Main } from "./components/Main";
 import { GlobalStyle } from "./styles/global";
 import api from "./services/api";
 import { useState } from "react";
+import { Container } from "./styles/App";
 
 const apiKey = process.env.REACT_APP_API_KEY;
 export function App() {
-  const [location, setLocation] = useState("London");
+  const [location, setLocation] = useState("london");
   const [weatherData, setWeatherData] = useState();
 
   const handleSearch = () => {
     api
-      .get("/current.json", {
+      .get("/forecast.json", {
         params: {
           key: apiKey,
           q: location,
-          lang: "pt",
+          days: 7,
         },
       })
       .then((response) => {
-        const weatherData = response.data;
-        setWeatherData(weatherData);
+        const data = response.data;
+        setWeatherData(data);
       })
       .catch((error) => console.log(error));
   };
 
   return (
-    <>
-      <Header
+    <Container>
+      <SideBar
         handleSearch={handleSearch}
         value={location}
         setLocation={setLocation}
+        weatherData={weatherData}
       />
-      {weatherData && <Main weatherData={weatherData} />}
+
+      <Main weatherData={weatherData} />
       <GlobalStyle />
-    </>
+    </Container>
   );
 }

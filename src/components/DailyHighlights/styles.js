@@ -12,7 +12,8 @@ export const Content = styled.div`
   margin-top: 15px;
 h3{
     font-size:14px;
-    color:var(--gray-500)
+    color:var(--gray-500);
+    margin-bottom: 12px;
 }
   .content-div{
     display: flex;
@@ -21,6 +22,14 @@ h3{
     height: 120px;
     background: var(--white);
     border-radius: 10px;
-    padding:  10px;
+    padding:  10px 20px;
+  }
+  p{
+    font-size:32px;
+    font-weight: bold;
+  }
+  span{
+    font-size: 20px;
+    font-weight: bold
   }
 `;

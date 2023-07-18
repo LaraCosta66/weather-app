@@ -7,7 +7,7 @@ import { Container } from "./styles/App";
 
 const apiKey = process.env.REACT_APP_API_KEY;
 export function App() {
-  const [location, setLocation] = useState("London");
+  const [location, setLocation] = useState("london");
   const [weatherData, setWeatherData] = useState();
 
   const handleSearch = () => {
@@ -20,8 +20,8 @@ export function App() {
         },
       })
       .then((response) => {
-        const weatherData = response.data;
-        setWeatherData(weatherData);
+        const data = response.data;
+        setWeatherData(data);
       })
       .catch((error) => console.log(error));
   };

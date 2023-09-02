@@ -1,9 +1,10 @@
 import { styled } from "styled-components";
 
 export const Container = styled.div`
+
   width: 300px;
   height: 600px;
-  border-radius: 30px 0 0 30px;
+  /* border-radius: 30px 0 0 30px; */
   padding: 25px;
   background: var(--white);
 

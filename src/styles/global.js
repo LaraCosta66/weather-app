@@ -1,5 +1,5 @@
-import { createGlobalStyle } from "styled-components";
-
+import { createGlobalStyle, styled } from "styled-components";
+import backgroundImage from '../assets/background.jpg'
 export const GlobalStyle = createGlobalStyle`
 :root{
     --gray-700:#374151;
@@ -25,8 +25,11 @@ html{
     }
 }
 body{
-    background: var(--gray-300);
-    padding: 50px 200px;
+    padding:30px;
+    background:  url(${backgroundImage} ) no-repeat;
+    background-color: rgba(0, 0, 0, 0.5); /* Cor de fundo semi-transparente */
+    background-blend-mode: overlay; /* Mistura de fundo */
+    opacity: 0.8; /* Opacidade da imagem de fundo */
 }
 button{
     cursor: pointer;
@@ -37,3 +40,15 @@ button{
 }
 
 `;
+export const Container = styled.div`
+display: flex;
+flex-direction: row;
+justify-content: flex-end;
+width:auto ;
+height: auto;
+background:  url(${backgroundImage} ) no-repeat;
+border-radius: 10px;
+border: 10px solid gray;
+
+
+`

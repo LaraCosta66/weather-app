@@ -1,97 +1,157 @@
 import { styled } from "styled-components";
 
 export const Container = styled.div`
-
-  width: 300px;
-  height: 600px;
-  /* border-radius: 30px 0 0 30px; */
+  width: 400px;
+  height: 100vh;
   padding: 25px;
-  background: var(--white);
+  background-color: rgba(0, 0, 0, 0.5);
+  background-blend-mode: overlay;
+  opacity: 0.9;
 
-  h2 {
-    font-weight: bold;
-  }
-  .search-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 8px;
-  }
-  .search-container input[type="text"] {
-    border: none;
-    border-bottom: 1px solid var(--gray-400);
-    background: var(--white);
-    font-size: 14px;
-    padding: 2px;
-  }
-  #btnSearch {
-    position: relative;
-    display: flex;
-    align-items: center;
+  .search-section {
     width: auto;
-    height: 30px;
-    border: none;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     padding: 5px;
-    background-color: var(--gray-400);
-    color: white;
-    cursor: pointer;
-    border-radius: 20%;
+    gap: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0.8;
+    border: 1px solid grey;
+    border-radius: 10px;
+    #location {
+      display: flex;
+
+      gap: 10px;
+    }
+    .icon {
+      width: 24px;
+      height: 24px;
+      color: #fff;
+    }
+    input {
+      background: none;
+      border: 0;
+      outline: none;
+      font-size: 1rem;
+      color: #fff;
+    }
+
+    .btn {
+      width: 100px;
+      height: 35px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      border: none;
+      border-radius: 4px;
+      overflow: hidden;
+      font-weight: bold;
+    }
+
+    .text {
+      width: 65%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      background-color: rgb(2, 153, 153);
+    }
+
+    .searchIcon {
+      width: 40%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      background-color: teal;
+    }
+
+    .btn:hover .text {
+      background-color: rgb(0, 133, 133);
+    }
+
+    .btn:hover .svgIcon {
+      background-color: rgb(0, 105, 105);
+    }
   }
-  .icon {
-    width: 40px;
-    height: 20px;
+
+  .weatherSection {
+    width: auto;
+    height: auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    gap: 10px;
+    margin-top: 10px;
+    border-bottom: 1px solid gray;
+
+    .title {
+      font-size: 3rem;
+    }
   }
-  .weather-container {
+  .content {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 20px;
-  }
-  .weather-container img {
-    width: 128px;
-    height: 128px;
-  }
-  .weather-container p {
-    font-family: "IBM Plex Sans Light", sans-serif;
-    font-size: 3.5rem;
-    font-weight: bold;
-  }
-  .time {
-    display: flex;
-    justify-content: center;
-    padding: 10px;
-    font-size: 1.5rem;
-    border-bottom: 1px solid var(--gray-300);
-  }
-  .container-icons {
-    font-weight: bold;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 10px;
-    gap: 10px;
-  }
-  .container-icons img {
-    width: 32px;
-    height: 32px;
-  }
-  .container-icons span {
-    display: flex;
-    align-items: center;
-  }
-  .background {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    gap: 30px;
     color: #fff;
-    width: auto;
-    font-size: 1.025rem;
-    font-weight: bold;
-    height: 100px;
-    border-radius: 20px;
-    background-image: url("../assets/bg-image.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    h2 {
+      color: white;
+    }
+    .forecast-box {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 10px;
+      width: 300px;
+      height: auto;
+      padding: 10px;
+    }
+    .image {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 50px;
+      height: 50px;
+      border-radius: 10px;
+      background-color: rgba(0, 0, 0, 0.4);
+      opacity: 0.8;
+      img {
+        max-width: 48px;
+        max-height: 48px;
+      }
+    }
+    .condition {
+      width: auto;
+      font-size: 1.1rem;
+      font-weight: bold;
+      margin-right: 5px;
+      color: white;
+      .text-condition {
+        color: #6b7280;
+        font-size: 0.9rem;
+      }
+    }
+    .tempture {
+      border-left: 1px solid lightgrey;
+      padding-left: 10px;
+      height: 50px;
+      P {
+        font-size: 1.2rem;
+        color: #6b7280;
+        font-weight: bold;
+      }
+      .bold-text {
+        color: white;
+      }
+    }
   }
 `;

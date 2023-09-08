@@ -1,7 +1,10 @@
 import { Container, Content } from "./styles";
-import { WeatherContext } from "../Main";
+import { WeatherContext } from "../../App";
 import { useContext } from "react";
-import { BsFillArrowDownCircleFill, BsFillArrowUpCircleFill} from "react-icons/bs";
+import {
+  BsFillArrowDownCircleFill,
+  BsFillArrowUpCircleFill,
+} from "react-icons/bs";
 import { TbGps } from "react-icons/tb";
 export function Daily() {
   const weatherData = useContext(WeatherContext);
@@ -15,20 +18,21 @@ export function Daily() {
             <h3>UV INDEX</h3>
             <p>{weatherData.current.uv}</p>
           </div>
-
           <div className="content-div">
             <h3>Wind Status</h3>
-            <p>{weatherData.current.wind_kph} KM/h</p>
-            <span><TbGps /> {weatherData.current.wind_dir}</span>
+            <p>{weatherData.current.wind_kph}Km/h</p>
+            <span>
+              <TbGps className="icon" /> {weatherData.current.wind_dir}
+            </span>
           </div>
           <div className="content-div">
             <h3>Sunrise & Sunset</h3>
             <span>
-              <BsFillArrowUpCircleFill />
+              <BsFillArrowUpCircleFill className="icon" />{" "}
               {weatherData.forecast.forecastday[0].astro.sunrise}
             </span>
             <span>
-              <BsFillArrowDownCircleFill />
+              <BsFillArrowDownCircleFill className="icon" />{" "}
               {weatherData.forecast.forecastday[0].astro.sunset}
             </span>
           </div>

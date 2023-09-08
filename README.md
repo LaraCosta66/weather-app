@@ -6,7 +6,7 @@ https://www.weatherapi.com/docs/
 ### Utilizei como referência um  design que encontrei no dribbble do artista @Awsmd
 
 ## Resultado final do projeto
-![Captura de Tela (17)](https://github.com/LaraCosta66/weather-app/assets/70964544/abdd0208-f1b5-463e-b05b-460a314b65f0)
+![weatherApp](https://github.com/LaraCosta66/weather-app/assets/70964544/15d812e9-07be-495a-ac37-839367e1a001)
 <br/>
 # Para iniciar o projeto
 ### Instale as dependencias

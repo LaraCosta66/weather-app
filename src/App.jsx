@@ -1,9 +1,9 @@
 import { SideBar } from "./components/SideBar";
-// import { Main } from "./components/Main";
+import { Main } from "./components/Main";
 import { Container, GlobalStyle } from "./styles/global";
 import api from "./services/api";
-import { useState } from "react";
-
+import { createContext, useState } from "react";
+export const WeatherContext = createContext();
 
 const apiKey = process.env.REACT_APP_API_KEY;
 export function App() {
@@ -27,17 +27,17 @@ export function App() {
   };
 
   return (
-    <Container>
-      {/* <Main weatherData={weatherData} /> */}
-      <SideBar
-        handleSearch={handleSearch}
-        value={location}
-        setLocation={setLocation}
-        weatherData={weatherData}
-      />
-
-      
-      <GlobalStyle />
-    </Container>
+    <WeatherContext.Provider value={weatherData}>
+      <Container>
+        <Main weatherData={weatherData} />
+        <SideBar
+          handleSearch={handleSearch}
+          value={location}
+          setLocation={setLocation}
+          weatherData={weatherData}
+        />
+        <GlobalStyle />
+      </Container>
+    </WeatherContext.Provider>
   );
 }

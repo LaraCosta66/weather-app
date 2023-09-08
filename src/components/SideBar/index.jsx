@@ -48,7 +48,8 @@ export function SideBar({ handleSearch, location, setLocation, weatherData }) {
 
       <div className="content">
         <h2>The Next Days Forecast</h2>
-        {weatherData.forecast &&
+        {weatherData &&
+          weatherData.forecast &&
           weatherData.forecast.forecastday.map((forecastDay) => {
             const date = new Date(forecastDay.date);
             const dayOfWeek = daysOfWeek[date.getDay()];
